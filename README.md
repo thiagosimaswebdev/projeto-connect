@@ -1,16 +1,73 @@
-# React + Vite
+# 🌍 Projeto Social Connect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida com foco em prática de desenvolvimento front-end moderno, utilizando React e consumo de API. O projeto simula uma plataforma que conecta empresas a projetos sociais, permitindo navegação entre páginas e interação com dados externos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+### ⚛️ React
+Biblioteca JavaScript para construção de interfaces reativas e componentizadas.  
+Utilizada para estruturar a aplicação em componentes reutilizáveis e organizados.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔀 React Router DOM
+Responsável pelo gerenciamento de rotas da aplicação, permitindo navegação entre páginas sem recarregar o navegador (SPA – Single Page Application).
 
-## Expanding the ESLint configuration
+### 🎨 SCSS (CSS Modules)
+Utilizado para estilização modular, garantindo isolamento de estilos por componente, melhor organização e manutenção mais simples do código.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔔 SweetAlert2
+Biblioteca para exibição de alertas personalizados, proporcionando melhor experiência ao usuário com feedback visual mais moderno e interativo.
+
+---
+
+## 🧠 Conceitos Aplicados
+
+- Componentização
+- Props
+- Hooks (`useState`, `useEffect`)
+- Estrutura SPA
+- Responsividade com media queries
+- Organização de pastas e boas práticas
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+src/
+ ├── components/
+ ├── pages/
+ ├── assets/
+ ├── globalStyles.scss
+ └── App.jsx
+```
+
+---
+
+## 📱 Responsividade
+
+A aplicação foi desenvolvida com foco em layout responsivo, adaptando-se a diferentes tamanhos de tela (desktop, tablet e mobile), utilizando Flexbox, media queries e boas práticas de design responsivo.
+
+---
+
+## 🎯 Objetivo do Projeto
+
+Este projeto teve como objetivo reforçar conhecimentos em:
+
+- Estruturação de aplicações React
+- Navegação com React Router
+- Integração com APIs externas
+- Organização e escalabilidade de código
+- Melhoria da experiência do usuário
+- Aplicação de boas práticas de desenvolvimento front-end
+
+---
+
+## 👨🏻‍💻 Desenvolvedor
+
+Thiago Simas  
+Estudante de Análise e Desenvolvimento de Sistemas  
+Em constante evolução na área de Desenvolvimento Web
+
+
