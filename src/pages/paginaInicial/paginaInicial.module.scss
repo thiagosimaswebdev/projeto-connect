@@ -1,0 +1,434 @@
+// .main {
+
+// display: flex;
+// justify-content: space-around;
+// margin-bottom: 20px;
+// padding: 0 20px;
+
+// img {
+//     flex: 1;
+//     display: block;
+//     max-width: 100%;
+//     min-width: 0;
+//     height: auto;
+//     object-fit: contain;
+// }
+// }
+
+// .Info {
+//     flex: 1;
+
+// display: flex;
+// flex-direction: column;
+// justify-content: space-evenly;
+
+// h1 {
+// font-family: 'Source Sans 3', sans-serif;
+// font-weight: 700;
+// font-size: 90px;
+// color: #205691;
+// max-width: 45rem;
+// }
+
+// p {
+// font-family: 'Inter', sans-serif;
+// font-size: 24px;
+// font-weight: 400;
+// color: #205691;
+// max-width: 45rem;
+// }
+
+// button {
+// max-width: 332px;
+// padding: 11px 0;
+// background-color: #FD7267;
+// color: #fff;
+// font-family: "Source Sans 3", sans-serif;
+// font-size: 20px;
+// font-weight: 600;
+// border: none;
+// cursor: pointer;
+// }
+// }
+
+// .infoDados {
+// display: flex;
+// justify-content: space-between;
+
+
+// h2, h3 {
+// color: #205691;
+// text-align: center;
+// }
+
+// h2 {
+// font-family: "Source Sans 3", sans-serif;
+// font-size: 50px;
+// font-weight: 700;
+// }
+
+// h3 {
+//     font-family: 'Inter', sans-serif;
+//     font-size: 16px;
+//     font-weight: 400;
+// }
+// }
+
+// @media (max-width: 768px) {
+//     .main{
+//         flex-direction: column;
+//         align-items: center;
+//         height: auto;
+
+//         img{
+//             max-width: 520px;
+//             width: 100%;
+//             margin: 10px;
+//         }
+//     }
+
+//     .Info{
+//         width: 100%;
+//         justify-content: space-between;
+//         align-items: center;
+
+//         h1{
+//             font-size: 70px;
+//         }
+
+//         h1, p {
+//             text-align: center;
+//         }
+
+//         button{
+//             margin: 20px 0;
+//             font-size: 20px;
+//             padding: 10px;
+//         }
+//     }
+
+//     .infoDados article{
+//         width: 120px;
+        
+
+//         h2 {
+//             font-size: 30px;
+//         }
+
+//         h3 {
+//             font-size: 12px;
+//         }
+//     }
+// }
+
+// @media (max-width: 500px) {
+// .main{
+//     height: 1000px;
+// }
+
+// .Info h1{
+//     font-size: 40px;
+// }
+
+// .Info p{
+//     font-size: 16px;
+// }
+
+// }
+
+// @media (max-width: 400px) {
+//     .infoDados{
+//         flex-direction: column;
+//     }
+// }
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between; // 🔧 ALTERADO: evita estouro causado por space-around
+  margin: 0 auto 3px; // 🔧 ALTERADO: centraliza o layout horizontalmente
+  padding: 0 20px;
+  
+  max-width: 1280px; // 🔧 ADICIONADO: impede quebra a partir de ~1250px
+  width: 100%; // 🔧 ADICIONADO: mantém responsividade
+
+
+  img {
+    flex: 1;
+    display: block;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 1; // 🔧 ADICIONADO: permite a imagem encolher sem quebrar layout
+  }
+}
+
+.Info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // 🔧 ALTERADO: mais previsível que space-evenly
+  gap: 20px; // 🔧 ADICIONADO: espaçamento consistente entre elementos
+  flex-shrink: 0; // 🔧 ADICIONADO: impede texto de esmagar
+
+  h1 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: clamp(40px, 5vw, 90px); // 🔧 ADICIONADO: fonte fluida
+    color: #205691;
+    max-width: 45rem;
+    line-height: 1.1; // 🔧 ADICIONADO: evita quebra feia de linha
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(16px, 2vw, 24px); // 🔧 ADICIONADO: texto responsivo
+    font-weight: 400;
+    color: #205691;
+    max-width: 45rem;
+  }
+
+  button {
+    max-width: 320px; // 🔧 ALTERADO: evita botão esticar demais
+    width: 100%; // 🔧 ADICIONADO: melhor comportamento mobile
+    padding: 14px 0; // 🔧 ALTERADO: área de clique mais confortável
+    background-color: #FD7267;
+    color: #fff;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 18px; // 🔧 ALTERADO: evita fonte desproporcional
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px; // 🔧 ADICIONADO: melhora visual
+  }
+}
+
+.infoDados {
+  display: flex;
+  justify-content: space-between;
+
+  h2, h3 {
+    color: #205691;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 20px;
+
+    img {
+      max-width: 520px;
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+
+  .Info {
+    width: 100%;
+    align-items: center;
+    text-align: center; // 🔧 ADICIONADO: evita desalinhamento
+
+    h1 {
+      font-size: 48px; // 🔧 AJUSTADO: melhor leitura no tablet
+    }
+
+    p {
+      font-size: 18px; // 🔧 AJUSTADO
+    }
+
+    button {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+  }
+
+  .infoDados article {
+    width: 120px;
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Info h1 {
+    font-size: 36px; // 🔧 AJUSTADO: evita quebra
+  }
+
+  .Info p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .infoDados {
+    flex-direction: column;
+    gap: 12px; // 🔧 ADICIONADO: espaçamento vertical
+  }
+}
+
+
+// -------------------------------
+
+// .main {
+// display: flex;
+// justify-content: space-around;
+// margin-bottom: 20px;
+// padding: 0 20px;
+
+// img {
+// flex: 1;
+// display: block;
+// max-width: 100%;
+// min-width: 0;
+// height: auto;
+// object-fit: contain;
+// }
+// }
+
+// .info {
+// flex: 1;
+// display: flex;
+// flex-direction: column;
+// justify-content: space-evenly;
+
+// h1 {
+// font-family: 'Source Sans 3', sans-serif;
+// font-weight: 700;
+// font-size: 90px;
+// color: #205691;
+// max-width: 45rem;
+// }
+
+// p {
+// font-family: 'Inter', sans-serif;
+// font-size: 24px;
+// font-weight: 400;
+// color: #205691;
+// max-width: 45rem;
+// }
+
+// button {
+// max-width: 332px;
+// padding: 20px 0;
+// background-color: #FD7267;
+// color: #fff;
+// font-family: "Source Sans 3", sans-serif;
+// font-size: 24px;
+// font-weight: 600;
+// border: none;
+// cursor: pointer;
+// }
+// }
+
+// .infoDados {
+// display: flex;
+// justify-content: space-between;
+
+// h2, h3 {
+// color: #205691;
+// text-align: center;
+// }
+
+// h2 {
+// font-family: "Source Sans 3", sans-serif;
+// font-size: 50px;
+// font-weight: 700;
+// }
+
+// h3 {
+// font-family: "Inter", sans-serif;
+// font-size: 16px;
+// font-weight: 400;
+// }
+// }
+
+// @media (max-width: 768px) {
+// .main {
+// flex-direction: column;
+// align-items: center;
+// height: auto;
+
+// img {
+// max-width: 522px;
+// width: 100%;
+// }
+// }
+
+// .info {
+// width: 100%;
+// justify-content: space-between;
+// align-items: center;
+
+// h1 {
+// font-size: 80px;
+// }
+// h1, p {
+// text-align: center;
+// }
+
+// button {
+// margin: 20px 0;
+// font-size: 20px;
+// padding: 10px;
+// }
+// }
+
+// .infoDados article {
+// width: 120px;
+
+// h2 {
+// font-size: 30px;
+// }
+
+// h3 {
+// font-size: 12px;
+// }
+// }
+// }
+
+// @media (max-width: 500px) {
+// .main {
+// height: 1000px;
+// }
+
+// .info h1 {
+// font-size: 40px;
+// }
+
+// .info p {
+// font-size: 16px;
+// }
+// }
+
+// @media (max-width: 400px) {
+// .infoDados {
+// flex-direction: column;
+// }
+// }
