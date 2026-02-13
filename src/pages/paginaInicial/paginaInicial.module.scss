@@ -1,156 +1,13 @@
-// .main {
-
-// display: flex;
-// justify-content: space-around;
-// margin-bottom: 20px;
-// padding: 0 20px;
-
-// img {
-//     flex: 1;
-//     display: block;
-//     max-width: 100%;
-//     min-width: 0;
-//     height: auto;
-//     object-fit: contain;
-// }
-// }
-
-// .Info {
-//     flex: 1;
-
-// display: flex;
-// flex-direction: column;
-// justify-content: space-evenly;
-
-// h1 {
-// font-family: 'Source Sans 3', sans-serif;
-// font-weight: 700;
-// font-size: 90px;
-// color: #205691;
-// max-width: 45rem;
-// }
-
-// p {
-// font-family: 'Inter', sans-serif;
-// font-size: 24px;
-// font-weight: 400;
-// color: #205691;
-// max-width: 45rem;
-// }
-
-// button {
-// max-width: 332px;
-// padding: 11px 0;
-// background-color: #FD7267;
-// color: #fff;
-// font-family: "Source Sans 3", sans-serif;
-// font-size: 20px;
-// font-weight: 600;
-// border: none;
-// cursor: pointer;
-// }
-// }
-
-// .infoDados {
-// display: flex;
-// justify-content: space-between;
-
-
-// h2, h3 {
-// color: #205691;
-// text-align: center;
-// }
-
-// h2 {
-// font-family: "Source Sans 3", sans-serif;
-// font-size: 50px;
-// font-weight: 700;
-// }
-
-// h3 {
-//     font-family: 'Inter', sans-serif;
-//     font-size: 16px;
-//     font-weight: 400;
-// }
-// }
-
-// @media (max-width: 768px) {
-//     .main{
-//         flex-direction: column;
-//         align-items: center;
-//         height: auto;
-
-//         img{
-//             max-width: 520px;
-//             width: 100%;
-//             margin: 10px;
-//         }
-//     }
-
-//     .Info{
-//         width: 100%;
-//         justify-content: space-between;
-//         align-items: center;
-
-//         h1{
-//             font-size: 70px;
-//         }
-
-//         h1, p {
-//             text-align: center;
-//         }
-
-//         button{
-//             margin: 20px 0;
-//             font-size: 20px;
-//             padding: 10px;
-//         }
-//     }
-
-//     .infoDados article{
-//         width: 120px;
-        
-
-//         h2 {
-//             font-size: 30px;
-//         }
-
-//         h3 {
-//             font-size: 12px;
-//         }
-//     }
-// }
-
-// @media (max-width: 500px) {
-// .main{
-//     height: 1000px;
-// }
-
-// .Info h1{
-//     font-size: 40px;
-// }
-
-// .Info p{
-//     font-size: 16px;
-// }
-
-// }
-
-// @media (max-width: 400px) {
-//     .infoDados{
-//         flex-direction: column;
-//     }
-// }
 
 .main {
   flex: 1;
   display: flex;
-  justify-content: space-between; // 🔧 ALTERADO: evita estouro causado por space-around
-  margin: 0 auto 3px; // 🔧 ALTERADO: centraliza o layout horizontalmente
+  justify-content: space-between; 
+  margin: 0 auto 3px; 
   padding: 0 20px;
-  
-  max-width: 1280px; // 🔧 ADICIONADO: impede quebra a partir de ~1250px
-  width: 100%; // 🔧 ADICIONADO: mantém responsividade
+  height: auto;
+  max-width: 1279px; 
+  width: 100%; 
 
 
   img {
@@ -160,7 +17,7 @@
     min-width: 0;
     height: auto;
     object-fit: contain;
-    flex-shrink: 1; // 🔧 ADICIONADO: permite a imagem encolher sem quebrar layout
+    flex-shrink: 1; 
   }
 }
 
@@ -168,45 +25,60 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; // 🔧 ALTERADO: mais previsível que space-evenly
-  gap: 20px; // 🔧 ADICIONADO: espaçamento consistente entre elementos
-  flex-shrink: 0; // 🔧 ADICIONADO: impede texto de esmagar
+  justify-content: center; 
+  gap: 20px;
+  flex-shrink: 0; 
 
   h1 {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 700;
-    font-size: clamp(40px, 5vw, 90px); // 🔧 ADICIONADO: fonte fluida
+    font-size: clamp(40px, 5vw, 90px); 
     color: #205691;
     max-width: 45rem;
-    line-height: 1.1; // 🔧 ADICIONADO: evita quebra feia de linha
+    line-height: 1.1; 
   }
 
   p {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(16px, 2vw, 24px); // 🔧 ADICIONADO: texto responsivo
+    font-size: clamp(16px, 2vw, 24px); 
     font-weight: 400;
     color: #205691;
     max-width: 45rem;
   }
 
-  button {
-    max-width: 320px; // 🔧 ALTERADO: evita botão esticar demais
-    width: 100%; // 🔧 ADICIONADO: melhor comportamento mobile
-    padding: 14px 0; // 🔧 ALTERADO: área de clique mais confortável
-    background-color: #FD7267;
-    color: #fff;
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 18px; // 🔧 ALTERADO: evita fonte desproporcional
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px; // 🔧 ADICIONADO: melhora visual
+button {
+  max-width: 320px;
+  width: 100%;
+  padding: 14px 0;
+  background-color: #FD7267;
+  color: #fff;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 12px rgba(253, 114, 103, 0.35);
+  transition: all 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(253, 114, 103, 0.45);
+    filter: brightness(1.05);
   }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(253, 114, 103, 0.3);
+  }
+}
+
 }
 
 .infoDados {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   h2, h3 {
     color: #205691;
@@ -226,14 +98,13 @@
   }
 }
 
-/* =======================
-   RESPONSIVO
-======================= */
+
 
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: auto;
     margin-top: 20px;
 
@@ -246,15 +117,16 @@
 
   .Info {
     width: 100%;
+    height: 40%;
     align-items: center;
-    text-align: center; // 🔧 ADICIONADO: evita desalinhamento
+    text-align: center; 
 
     h1 {
-      font-size: 48px; // 🔧 AJUSTADO: melhor leitura no tablet
+      font-size: 48px; 
     }
 
     p {
-      font-size: 18px; // 🔧 AJUSTADO
+      font-size: 18px; 
     }
 
     button {
@@ -264,7 +136,9 @@
   }
 
   .infoDados article {
-    width: 120px;
+    width: 100%;
+    max-height: 70px;
+   
 
     h2 {
       font-size: 30px;
@@ -288,147 +162,21 @@
 
 @media (max-width: 400px) {
   .infoDados {
-    flex-direction: column;
-    gap: 12px; // 🔧 ADICIONADO: espaçamento vertical
+    flex-direction: row;
+    //gap: 12px; // 🔧 ADICIONADO: espaçamento vertical
+  }
+}
+
+@media (max-width: 768px) {
+  .infoDados {
+    //flex-direction: column;   // 🔥 ESSENCIAL
+    align-items: center;
+    gap: 20px;
+  }
+
+  .infoDados article {
+    width: auto;              // 🔥 remove o 100%
   }
 }
 
 
-// -------------------------------
-
-// .main {
-// display: flex;
-// justify-content: space-around;
-// margin-bottom: 20px;
-// padding: 0 20px;
-
-// img {
-// flex: 1;
-// display: block;
-// max-width: 100%;
-// min-width: 0;
-// height: auto;
-// object-fit: contain;
-// }
-// }
-
-// .info {
-// flex: 1;
-// display: flex;
-// flex-direction: column;
-// justify-content: space-evenly;
-
-// h1 {
-// font-family: 'Source Sans 3', sans-serif;
-// font-weight: 700;
-// font-size: 90px;
-// color: #205691;
-// max-width: 45rem;
-// }
-
-// p {
-// font-family: 'Inter', sans-serif;
-// font-size: 24px;
-// font-weight: 400;
-// color: #205691;
-// max-width: 45rem;
-// }
-
-// button {
-// max-width: 332px;
-// padding: 20px 0;
-// background-color: #FD7267;
-// color: #fff;
-// font-family: "Source Sans 3", sans-serif;
-// font-size: 24px;
-// font-weight: 600;
-// border: none;
-// cursor: pointer;
-// }
-// }
-
-// .infoDados {
-// display: flex;
-// justify-content: space-between;
-
-// h2, h3 {
-// color: #205691;
-// text-align: center;
-// }
-
-// h2 {
-// font-family: "Source Sans 3", sans-serif;
-// font-size: 50px;
-// font-weight: 700;
-// }
-
-// h3 {
-// font-family: "Inter", sans-serif;
-// font-size: 16px;
-// font-weight: 400;
-// }
-// }
-
-// @media (max-width: 768px) {
-// .main {
-// flex-direction: column;
-// align-items: center;
-// height: auto;
-
-// img {
-// max-width: 522px;
-// width: 100%;
-// }
-// }
-
-// .info {
-// width: 100%;
-// justify-content: space-between;
-// align-items: center;
-
-// h1 {
-// font-size: 80px;
-// }
-// h1, p {
-// text-align: center;
-// }
-
-// button {
-// margin: 20px 0;
-// font-size: 20px;
-// padding: 10px;
-// }
-// }
-
-// .infoDados article {
-// width: 120px;
-
-// h2 {
-// font-size: 30px;
-// }
-
-// h3 {
-// font-size: 12px;
-// }
-// }
-// }
-
-// @media (max-width: 500px) {
-// .main {
-// height: 1000px;
-// }
-
-// .info h1 {
-// font-size: 40px;
-// }
-
-// .info p {
-// font-size: 16px;
-// }
-// }
-
-// @media (max-width: 400px) {
-// .infoDados {
-// flex-direction: column;
-// }
-// }

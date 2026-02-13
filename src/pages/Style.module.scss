@@ -21,10 +21,10 @@
     width: 100%;
 
     article{
-       // border: solid 1px red;
         display: flex;
         flex: 1;
         justify-content: space-around;
+
     }
 
     article:not(:last-child) {
@@ -34,20 +34,27 @@
 
 @media (max-width: 768px) {
     .main{
-        height: 160vh;
-        padding: 30px;
+        height: auto;
+        padding: 40px;
 
         h1 {
             font-size: 40px;
+            margin-bottom: 15px;
         }
 
         section{
-            flex-wrap: wrap;
+            //flex-wrap: wrap;
+            flex-direction: column;
             gap: 10px;
 
             article{
+                //border: solid;
+                height: auto;
+                gap: 10px;
+                min-height: 282px;
                 min-width: 252px;
-                margin: 5px;
+                margin-bottom: 18px;
+                
             }
 
                 article:not(:last-child) {
@@ -73,8 +80,16 @@
     section {
         article:not(:last-child) {
         border-right: none;
-        //border-bottom: 1px solid #cbcbcb;    
+        height: 50vh;
+        gap: 10px;
+        //border-bottom: 1px solid #cbcbcb;  
+                
+    }
+
+    article {
+        font-size: 14px;
         
+        //border: solid;
     }
 
 }

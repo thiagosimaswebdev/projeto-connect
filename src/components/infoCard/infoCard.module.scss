@@ -21,26 +21,38 @@
         color: #122f97;
         text-align: center;
     }
+
+    button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #205691;
+  font-family: 'Source Sans 3', sans-serif;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+
+  /* 🔥 efeito material */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: #122f97;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+}
 }
 
-button {
-    // padding: 10px 20px;
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    border: none;
-    background-color: #205691;
-    font-family: 'Source Sans 3', sans-serif;
-    color: white;
-    font-size: 22px;
-    font-weight: 600;
-    cursor: pointer;
-    
 
-    :hover {
-        background-color: #122f97;
-    }
-}
+
 
 .article img {
     max-width: 100%;
